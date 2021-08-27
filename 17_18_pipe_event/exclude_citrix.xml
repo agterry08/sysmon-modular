@@ -1,13 +1,11 @@
-<Sysmon schemaversion="4.60">
+<Sysmon schemaversion="4.30">
   <EventFiltering>
     <RuleGroup name="" groupRelation="or">
       <PipeEvent onmatch="exclude">
-        <Image condition="contains all">C:\Program Files;\Citrix\ICA Client\SelfServicePlugin\SelfService.exe</Image>
-        <Image condition="contains all">C:\Program Files;\Citrix\ICA Client\Receiver\Receiver.exe</Image>
-        <Image condition="contains all">C:\Program Files;\Citrix\ICA Client\wfcrun32.exe</Image>
-        <Image condition="contains all">C:\Program Files;\Citrix\ICA Client\concentr.exe</Image>
-        <Image condition="contains all">C:\Users\;\AppData\Local\Citrix\ICA Client\receiver\Receiver.exe</Image>
-        <Image condition="contains all">C:\Users\;\AppData\Local\Citrix\ICA Client\SelfServicePlugin\SelfService.exe</Image>
+        <Image condition="is">Program Files (x86)\Citrix\ICA Client\SelfServicePlugin\SelfService.exe</Image>
+        <Image condition="is">Program Files (x86)\Citrix\ICA Client\Receiver\Receiver.exe</Image>
+        <Image condition="is">Program Files (x86)\Citrix\ICA Client\wfcrun32.exe</Image>
+        <Image condition="is">Program Files (x86)\Citrix\ICA Client\concentr.exe</Image>
       </PipeEvent>
     </RuleGroup>
   </EventFiltering>
