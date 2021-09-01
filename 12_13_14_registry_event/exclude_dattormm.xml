@@ -1,0 +1,12 @@
+<Sysmon schemaversion="4.30">
+	<EventFiltering>
+		<RuleGroup name="" groupRelation="or">
+			<RegistryEvent onmatch="exclude">
+				<!--DATTORMM AND AEM-->
+				<Image condition="contains">C:\Program Files\CentraStage</Image>				<!--CentraStage Program Files-->
+				<Image condition="contains">C:\ProgramData\CentraStage</Image>				<!--CentraStage ProgramData-->
+				<Image condition="contains">C:\Program Files (x86)\CentraStage</Image>				<!--CentraStage Program Files (x86)-->
+			</RegistryEvent>
+		</RuleGroup>
+	</EventFiltering>
+</Sysmon>
